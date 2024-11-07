@@ -18,4 +18,10 @@ public class StringCalculatorTest {
 	    StringCalculator calculator = new StringCalculator();
 	    assertEquals(1, calculator.add("1"), "Single number should return the number itself");
 	}
+	
+	@Test
+	public void testAdd_TwoNumbersSeparatedByComma_ReturnsSum() {
+	    StringCalculator calculator = new StringCalculator();
+	    assertEquals(6, calculator.add("1,5"), "Two numbers separated by a comma should return their sum");
+	}
 }
