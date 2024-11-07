@@ -30,4 +30,11 @@ public class StringCalculatorTest {
 	    StringCalculator calculator = new StringCalculator();
 	    assertEquals(6, calculator.add("1\n2,3"), "Numbers separated by newline and comma should return their sum");
 	}
+	
+	@Test
+	public void testAdd_CustomDelimiter_ReturnsSum() {
+	    StringCalculator calculator = new StringCalculator();
+	    assertEquals(3, calculator.add("//;\n1;2"), "Custom delimiter should be supported");
+	}
+	
 }
